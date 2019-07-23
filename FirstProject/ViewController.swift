@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func clickButton(_ sender: UIButton) {
-        imageView.image=UIImage(named: arrayOfImages[randomNumbers])
+        imageView.image=UIImage(named: arrayOfImages.randomElement()!)
     }
-    let randomNumbers = Int.random(in: 0..<5)
+    var randomNumbers = Int.random(in: 0..<5)
     let arrayOfImages = ["ball1","ball2","ball3","ball4","ball5"]
     
 }
